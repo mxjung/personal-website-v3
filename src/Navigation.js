@@ -20,6 +20,7 @@ const NavList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: left;
+  margin-left: 25px;
   // border: 2px solid blue;
 `;
 
