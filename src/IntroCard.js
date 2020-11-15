@@ -19,16 +19,22 @@ const Welcome = styled.div`
   justify-content: center;
   // border: 2px solid blue;
   height: auto;
-  font-size: 70px;
+  font-size: 40px;
   font-family: 'Nanum Gothic', sans-serif;
   font-weight: 700;
-  padding: 20px 0px 20px 20px;
+  // padding: 20px 0px 20px 20px;
+  text-align: center;
   line-height: 110%;
+  margin-top: 30px;
   margin-bottom: 30px;
 `;
 
 const Profile = styled.div`
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
   // border: 2px solid red;
 
   @media only screen and (max-width: 790px) {
@@ -40,7 +46,7 @@ const Profile = styled.div`
 const ProfilePic = styled.div`
   width: 60%;
   height: 100%;
-  margin-left: 25px;
+  // margin-left: 25px;
   // border: 2px solid blue;
 
   @media only screen and (max-width: 790px) {
@@ -57,13 +63,17 @@ const AboutMe = styled.div`
   flex-direction: column;
   justify-content: center;
   height: auto;
-  width: 100%;
+  max-width: 100%;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
-  padding: 0px 20px;
+  font-style: italic;
+
+  padding: 10px 0px;
   line-height: 120%;
   margin-bottom: 20px;
+
+  // border: 2px solid blue;
 
   @media only screen and (max-width: 790px) {
     max-width: 400px;
@@ -75,7 +85,7 @@ function IntroCard() {
   return (
     <Intro>
       <Welcome>
-        Hello, I'm Max Jung.
+        Hello, I'm Max Jung
       </Welcome>
       <Profile>
         <ProfilePic>
@@ -83,7 +93,7 @@ function IntroCard() {
           {/* <img src={profilePicSrc} alt="profile-pic" style={{ 'height': '100px' }} /> */}
         </ProfilePic>
         <AboutMe>
-          I'm a software engineer based in Oakland, CA. I most recently worked as a Fullstack Intern at LiveStack building automated tasks in Express. I worked as a Systems Engineer at Siemens, and before that, I built Java Simulation models at an ag tech startup called Plenty.
+          I've worn a lot of hats
         </AboutMe>
       </Profile>
       <Navigation />
