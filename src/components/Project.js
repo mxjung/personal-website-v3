@@ -9,12 +9,12 @@ import { v4 as uuidv4 } from "uuid";
 import {
   CardContainer,
   ListItem
-} from './styles/Card';
+} from '../styles/Card';
 import {
   titleSize,
   descriptionSize,
   listSize
-} from './styles/FontSize';
+} from '../styles/FontSize';
 
 const Title = styled.div`
   font-size: ${titleSize};

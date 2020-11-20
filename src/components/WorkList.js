@@ -1,12 +1,12 @@
 import React from 'react';
 import "./ProjectList.css";
 import Work from './Work';
-import workData from "./workData";
+import workData from "../data/workData";
 import { v4 as uuidv4 } from "uuid";
 
 // import styles
-import Container from './styles/Container';
-import Title from './styles/Title';
+import Container from '../styles/Container';
+import Title from '../styles/Title';
 
 function WorkList() {
   return (

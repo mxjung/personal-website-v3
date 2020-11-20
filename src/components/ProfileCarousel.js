@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
-import profilePicSrc from './images/profile';
+import profilePicSrc from '../images/profile';
 import { v4 as uuidv4 } from "uuid";
 
 export default () => (

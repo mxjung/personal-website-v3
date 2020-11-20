@@ -2,12 +2,12 @@ import React from 'react';
 import "./ProjectList.css";
 import styled from 'styled-components';
 import Project from './Project';
-import projectData from "./projectData";
+import projectData from "../data/projectData";
 import { v4 as uuidv4 } from "uuid";
 
 // import styles
-import Container from './styles/Container';
-import Title from './styles/Title';
+import Container from '../styles/Container';
+import Title from '../styles/Title';
 
 // We don't want margin top to be 20px (as it is in Container)
 const ProjectContainer = styled(Container)`

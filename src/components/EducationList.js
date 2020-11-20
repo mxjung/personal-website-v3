@@ -5,18 +5,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 // import styles
-import Container from './styles/Container';
-import Title from './styles/Title';
+import Container from '../styles/Container';
+import Title from '../styles/Title';
 import {
   CardContainer,
   ListItem
-} from './styles/Card';
+} from '../styles/Card';
 import {
   listSize,
   jobPositionSize,
   companySize,
   durationSize
-} from './styles/FontSize';
+} from '../styles/FontSize';
 
 const ContainerCard = styled(CardContainer)`
   flex-direction: column;
