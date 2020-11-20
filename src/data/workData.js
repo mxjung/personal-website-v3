@@ -1,4 +1,4 @@
-import livestackLogo from "./images/livestack-logo.png";
+import livestackLogo from "../images/livestack-logo.png";
 
 const workData = [
   {

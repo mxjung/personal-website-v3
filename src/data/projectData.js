@@ -1,6 +1,6 @@
-import warblerLogo from './images/warbler-logo.png';
-import microblogLogo from './images/microblog-logo.png';
-import joblyLogo from './images/jobly-logo.png';
+import warblerLogo from '../images/warbler-logo.png';
+import microblogLogo from '../images/microblog-logo.png';
+import joblyLogo from '../images/jobly-logo.png';
 
 const projectData = [
   {

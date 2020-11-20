@@ -8,12 +8,12 @@ import { v4 as uuidv4 } from "uuid";
 import {
   CardContainer,
   ListItem
-} from './styles/Card';
+} from '../styles/Card';
 import {
   jobPositionSize,
   companySize,
   durationSize
-} from './styles/FontSize';
+} from '../styles/FontSize';
 
 const Container = styled(CardContainer)`
   flex-direction: column;

@@ -2,18 +2,18 @@ import React from 'react';
 import "./ProjectList.css";
 import styled from 'styled-components';
 // import { animateScroll as scroll } from "react-scroll";
-import ResumePdf from "./docs/max-jung-resume-v3.pdf";
+import ResumePdf from "../docs/max-jung-resume-v3.pdf";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 
 // import styles
-import Container from './styles/Container';
-import Title from './styles/Title';
-import { ListItem } from './styles/Card';
+import Container from '../styles/Container';
+import Title from '../styles/Title';
+import { ListItem } from '../styles/Card';
 import {
   descriptionSize,
   jobPositionSize,
-} from './styles/FontSize';
+} from '../styles/FontSize';
 
 const ResumeContainer = styled(Container)`
   min-height: 100vh;
