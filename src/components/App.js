@@ -6,6 +6,9 @@ import Routes from "../Routes";
 import Contacts from "../components/Contacts";
 import IntroCard from "../components/IntroCard";
 
+// import styles
+import { breakpoints } from "../styles/GlobalSize";
+
 const Container = styled.div`
   box-sizing: border-box;
   font-size: 62.5%;
@@ -18,8 +21,14 @@ const AppDetail = styled.div`
   display: flex;
   height: auto;
 
-  // max-width: 1000px;
+  border: 1px solid white;
   position: relative;
+
+  @media (min-width: ${breakpoints.desktopMin}) {
+    max-width: 1200px;
+    padding: 0px 20px;
+    margin: auto;
+  }
 
   @media only screen and (max-width: 790px) {
     flex-direction: column;
@@ -38,7 +47,6 @@ const LeftPanel = styled.div`
   position: -webkit-sticky;
   position: sticky;
   top: 0vh;
-  border: 1px solid black;
 
   @media only screen and (max-width: 790px) {
     position: relative;
@@ -66,10 +74,10 @@ function App() {
     <BrowserRouter>
       <Container >
         <AppDetail>
-          <LeftPanel >
+          {/* <LeftPanel >
             <IntroCard />
             <Contacts />
-          </LeftPanel>
+          </LeftPanel> */}
           <ScrollPanel>
             <Routes />
           </ScrollPanel>
