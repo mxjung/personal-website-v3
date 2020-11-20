@@ -1,5 +1,6 @@
 import React from 'react';
 import '../components/App.css';
+import Landing from "../components/Landing";
 import ProjectList from "../components/ProjectList";
 import WorkList from "../components/WorkList";
 import EducationList from "../components/EducationList";
@@ -60,6 +61,7 @@ const ScrollPanel = styled.div`
 function Home() {
   return (
     <>
+      <Landing />
       <ProjectList />
       <WorkList />
       <EducationList />
