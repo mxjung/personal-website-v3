@@ -3,6 +3,8 @@ import './App.css';
 import { BrowserRouter } from "react-router-dom";
 import styled from 'styled-components';
 import Routes from "../Routes";
+import HeaderNavigation from "../components/HeaderNavigation";
+
 import Contacts from "../components/Contacts";
 import IntroCard from "../components/IntroCard";
 
@@ -13,13 +15,17 @@ const Container = styled.div`
   box-sizing: border-box;
   font-size: 62.5%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: #1c1d25;
 `;
 
 const AppDetail = styled.div`
   display: flex;
   height: auto;
+
+  flex-direction: column;
+  align-items: center;
 
   border: 1px solid white;
   position: relative;
@@ -30,10 +36,10 @@ const AppDetail = styled.div`
     margin: auto;
   }
 
-  @media only screen and (max-width: 790px) {
+  /* @media only screen and (max-width: 790px) {
     flex-direction: column;
     align-items: center;
-  }
+  } */
 `;
 
 const LeftPanel = styled.div`
@@ -41,7 +47,7 @@ const LeftPanel = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  // background-color: rgb(255,255,255);
+  background-color: rgb(255,255,255);
   width: 250px;
   height: 99vh;
   position: -webkit-sticky;
@@ -60,12 +66,29 @@ const LeftPanel = styled.div`
 // 99vh allows the panel to be taut and not jitter
 // when moving from one navigation link to another
 
+const NavHeader = styled.div`
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  background-color: #525e65;
+  position: sticky;
+  // Make sure that header nav is above other elements when scrolling
+  z-index: 999;
+  top: 0vh;
+
+  /* border: 2px solid red; */
+`;
+
 const ScrollPanel = styled.div`
   flex: 1 1 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   `;
 // overflow: auto;
 
@@ -73,11 +96,10 @@ function App() {
   return (
     <BrowserRouter>
       <Container >
+        <NavHeader >
+          <HeaderNavigation />
+        </NavHeader>
         <AppDetail>
-          {/* <LeftPanel >
-            <IntroCard />
-            <Contacts />
-          </LeftPanel> */}
           <ScrollPanel>
             <Routes />
           </ScrollPanel>

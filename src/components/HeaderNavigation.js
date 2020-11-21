@@ -1,5 +1,4 @@
 import React from 'react';
-import './Navigation.css';
 import styled from 'styled-components';
 import { Link } from "react-scroll";
 
@@ -7,52 +6,59 @@ const Profile = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // border: 2px solid red;
   height: auto;
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
   line-height: 100%;
-  margin-top: 20px;
+
+  /* border: 2px solid red; */
 `;
 
 const NavList = styled.ul`
   display: flex;
-  flex-direction: column;
-  align-items: left;
-  margin-left: 25px;
-  // border: 2px solid blue;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 5px 10px;
+
+  /* border: 2px solid blue; */
+
+  // There seems to be a feature where ul have 40px
+  // as automatic margin on the left of the ul (for ul tabs)
+  // so manually had to set this value to 0
+  padding-inline-start: 0px;
 `;
 
 const NavListItem = styled.li`
-  color: grey;
+  color: #e9e9e9;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   list-style-type: none;
 
-  margin-bottom: 15px;
-  margin-left: -15px;
+  /* margin-bottom: 15px; */
+  /* margin-left: -15px; */
+  padding: 10px 15px;
 
   transform-origin: bottom left;
   transition: all .4s ease-in-out;
 
   &:hover {
-    color: black;
+    color: white;
     cursor: pointer;
     transform: scale(1.05);
   }
 
   & > .active {
-    color: black;
-    border-bottom: 2px solid #333;
+    color: white;
+    border-bottom: 2px solid white;
     transform: scale(1.05);
   }
 `;
 // active allows navigation links to underline when active
 // margin left due to weird offset
 
-function Navigation() {
+function HeaderNavigation() {
   return (
     <>
       <Profile>
@@ -66,7 +72,7 @@ function Navigation() {
               offset={0}
               duration={500}
             >
-              01 Things I've Built
+              Projects
             </Link>
           </NavListItem>
           <NavListItem>
@@ -78,7 +84,7 @@ function Navigation() {
               offset={0}
               duration={500}
             >
-              02 Work Experience
+              Work Experience
             </Link>
           </NavListItem>
           <NavListItem>
@@ -90,7 +96,7 @@ function Navigation() {
               offset={0}
               duration={500}
             >
-              03 Education
+              Education
             </Link>
           </NavListItem>
           <NavListItem>
@@ -102,7 +108,7 @@ function Navigation() {
               offset={0}
               duration={500}
             >
-              04 Resume / Bio
+              Resume
             </Link>
           </NavListItem>
         </NavList>
@@ -111,4 +117,4 @@ function Navigation() {
   );
 }
 
-export default Navigation;
+export default HeaderNavigation;
