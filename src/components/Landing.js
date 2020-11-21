@@ -28,7 +28,12 @@ const Intro = styled.div`
   > span {
     transform: translateY(30px);
     opacity: 0;
-    animation: ${Float} 1s 0.2s forwards;
+
+    // https://css-tricks.com/almanac/properties/a/animation/
+    animation-name: ${Float};
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+    animation-fill-mode: forwards;
   }
 
   > span:nth-child(1) {
