@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link } from "react-scroll";
 
+const headerHeight = 45;
+
 const Profile = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: auto;
+  height: ${headerHeight + 'px'};
   font-size: 15px;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
@@ -36,9 +38,9 @@ const NavListItem = styled.li`
   align-items: flex-start;
   list-style-type: none;
 
-  /* margin-bottom: 15px; */
+  margin-top: 2px;
   /* margin-left: -15px; */
-  padding: 10px 15px;
+  padding: 8px 15px;
 
   transform-origin: bottom left;
   transition: all .4s ease-in-out;
@@ -46,17 +48,33 @@ const NavListItem = styled.li`
   &:hover {
     color: white;
     cursor: pointer;
-    transform: scale(1.05);
+    /* transform: scale(1.05); */
   }
 
   & > .active {
     color: white;
-    border-bottom: 2px solid white;
-    transform: scale(1.05);
+    /* border-bottom: 2px solid #f25757; */
+    /* padding: 0 0 2px; */
+  }
+
+  ::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2.5px;
+    margin-top: 2.5px;
+    margin-bottom: -2.5px;
+    background: #f25757;
+    transition: width .3s;
+  }
+
+  :hover::after {
+    /* transform: scale(1.05); */
+    width: 100%;
+    //transition: width .3s;
   }
 `;
 // active allows navigation links to underline when active
-// margin left due to weird offset
 
 function HeaderNavigation() {
   return (
@@ -66,10 +84,22 @@ function HeaderNavigation() {
           <NavListItem>
             <Link
               activeClass="active"
-              to="section1"
+              to="landing"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-headerHeight}
+              duration={500}
+            >
+              Home
+            </Link>
+          </NavListItem>
+          <NavListItem>
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-headerHeight}
               duration={500}
             >
               Projects
@@ -78,10 +108,10 @@ function HeaderNavigation() {
           <NavListItem>
             <Link
               activeClass="active"
-              to="section2"
+              to="work"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-headerHeight}
               duration={500}
             >
               Work Experience
@@ -90,10 +120,10 @@ function HeaderNavigation() {
           <NavListItem>
             <Link
               activeClass="active"
-              to="section3"
+              to="education"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-headerHeight}
               duration={500}
             >
               Education
@@ -102,10 +132,10 @@ function HeaderNavigation() {
           <NavListItem>
             <Link
               activeClass="active"
-              to="section4"
+              to="resume"
               spy={true}
               smooth={true}
-              offset={0}
+              offset={-headerHeight}
               duration={500}
             >
               Resume
