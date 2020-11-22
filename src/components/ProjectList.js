@@ -17,7 +17,7 @@ const ProjectContainer = styled(Container)`
 function ProjectList() {
   return (
     <ProjectContainer>
-      <div id="section1" >
+      <div id="projects" >
         <Title style={{ 'marginTop': '20px' }} >
           Things I've Built
         </Title>

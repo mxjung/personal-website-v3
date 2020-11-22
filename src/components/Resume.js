@@ -84,7 +84,7 @@ function Resume() {
 
   return (
     <ResumeContainer>
-      <div id="section4" >
+      <div id="resume" >
         <Title style={{ 'marginTop': '20px' }} >
           Resume / Bio
         </Title>

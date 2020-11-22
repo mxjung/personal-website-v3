@@ -11,7 +11,7 @@ import Title from '../styles/Title';
 function WorkList() {
   return (
     <Container>
-      <div id="section2" >
+      <div id="work" >
         <Title>
           Work Experience
         </Title>

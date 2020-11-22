@@ -111,7 +111,7 @@ const IconLink = styled.div`
 function EducationList() {
   return (
     <Container>
-      <div id="section3" >
+      <div id="education" >
         <Title>
           Education
         </Title>

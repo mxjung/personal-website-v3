@@ -54,7 +54,7 @@ const Intro = styled.div`
 function Landing() {
   return (
     <Container>
-      <div id="section1" >
+      <div id="landing" >
         <Intro >
           <span>Hello, </span>
           <span>I'm </span>
