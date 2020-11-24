@@ -52,7 +52,7 @@ const NavListItem = styled.li`
   }
 
   & > .active {
-    color: white;
+    color: #b4e0e8;
     /* border-bottom: 2px solid #f25757; */
     /* padding: 0 0 2px; */
   }

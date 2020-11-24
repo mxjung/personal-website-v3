@@ -54,7 +54,7 @@ const Intro = styled.div`
 function Landing() {
   return (
     <Container>
-      <div id="landing" >
+      <div id="landing" style={{'height' : '100%'}}>
         <Intro >
           <span>Hello, </span>
           <span>I'm </span>
